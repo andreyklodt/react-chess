@@ -1,0 +1,28 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "### About React chess game. The project has been built completely with React class components",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreyklodt/react-chess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreyklodt/react-chess/issues"
+  },
+  "homepage": "https://github.com/andreyklodt/react-chess#readme",
+  "dependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-dev-server": "^4.9.2"
+  }
+}
