@@ -1,25 +1,25 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src/",
-    "paths": {
-      "*": ["src/*"],
-    },
-    "outDir": "./dist/",
+    "strict": true,
     "noImplicitAny": true,
     "module": "es6",
-    "target": "es5",
+    "target": "es6",
     "jsx": "react-jsx",
     "checkJs": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowJs": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
   },
   "exclude": [
     "node_modules"
   ],
   "include": [
-    "src/**/*"
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ]
 }
+
