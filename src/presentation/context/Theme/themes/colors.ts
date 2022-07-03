@@ -8,7 +8,7 @@ type ColorT = {
    600: string,
    700: string,
    800: string,
-   900: string
+   900: string,
    A100: string,
    A200: string,
    A400: string,
@@ -17,4 +17,10 @@ type ColorT = {
 
 type ColorsT = {
    text: ColorT
+   background: {
+      500: string,
+      700: string,
+      800: string,
+      900: string,
+   }
 }

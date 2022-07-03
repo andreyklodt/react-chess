@@ -20,6 +20,12 @@ type ThemeT = {
 const theme: ThemeT = {
    colors: {
       // use when more than one theme
+      background: {
+         500: '#312E2B',
+         700: '#272522',
+         800: '#22201D',
+         900: '#1C1A18'
+      },
       text: {
          50: '#3A3A3A',
          100: '#3A3A3A',
@@ -63,3 +69,4 @@ const theme: ThemeT = {
 }
 
 export default theme
+

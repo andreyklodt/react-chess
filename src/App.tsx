@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {ThemeProvider} from "styled-components";
-import theme from "./presentation/context/theme";
+import theme from "./presentation/context/Theme";
 import Board from "./presentation/components/Board";
 import {Layout, GlobalStyle} from './styles'
 

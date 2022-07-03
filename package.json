@@ -1,7 +1,7 @@
 {
   "name": "projects",
   "version": "1.0.0",
-  "description": "### About React chess game. The project has been built completely with React class components",
+ "description": "### About React chess game. The project has been built completely with React class components",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
