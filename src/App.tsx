@@ -1,20 +1,19 @@
 import React, {Component} from 'react'
-import {ThemeProvider} from "styled-components";
-import theme from "./presentation/context/Theme";
+import Theme from "./presentation/context/Theme";
 import Board from "./presentation/components/Board";
-import {Layout, GlobalStyle} from './styles'
+import {GlobalStyle, Layout} from './styles'
 
 class App extends Component {
 
    render() {
 
       return <>
-         <ThemeProvider theme={theme}>
+         <Theme>
             <GlobalStyle/>
             <Layout>
                <Board/>
             </Layout>
-         </ThemeProvider>
+         </Theme>
       </>
    }
 }

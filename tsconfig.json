@@ -1,3 +1,5 @@
+// todo доработать модульные импорты
+
 {
   "compilerOptions": {
     "strict": true,
