@@ -25,6 +25,8 @@ class Theme extends Component<ThemePropsT, ThemeStateT> {
       this.state = {
          currentTheme: ThemeVariant.Light
       }
+
+      this.setTheme = this.setTheme.bind(this)
    }
 
    setTheme(currentTheme: ThemeVariant) {
