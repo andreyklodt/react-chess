@@ -1,13 +1,32 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(8, 40px);
-  grid-template-rows: repeat(8, 40px);
-  background: ${({theme}) => theme.colors.background.c700}
+export const Wrapper = styled.table`
 `
 
-export const ThemeButton = styled.button`
-  color: ${({theme}) => theme.colors.text.c50};
-  background: ${({theme}) => theme.colors.background.c900}
+export const TCell = styled.td`
+  height: 90px;
+  width: 90px;
 `
+
+export const TRow = styled.tr`
+  &:nth-child(odd) {
+    ${TCell}:nth-child(odd) {
+      background: ${({theme}) => theme.colors.green.c500}
+    }
+
+    ${TCell}:nth-child(even) {
+      background: ${({theme}) => theme.colors.yellow.c200}
+    }
+  }
+
+  &:nth-child(even) {
+    ${TCell}:nth-child(even) {
+      background: ${({theme}) => theme.colors.green.c500}
+    }
+      
+    ${TCell}:nth-child(odd) {
+      background: ${({theme}) => theme.colors.yellow.c200}
+    }
+  }
+`
+

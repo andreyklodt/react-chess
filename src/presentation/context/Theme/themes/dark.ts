@@ -1,8 +1,3 @@
-// https://tailwindcss.com/docs/customizing-colors#default-color-palette
-// https://github.com/mui/material-ui/blob/master/packages/mui-material/src/styles/createPalette.js
-// https://github.com/mui/material-ui/tree/master/packages/mui-material/src/colors
-// https://mui.com/material-ui/customization/default-theme/?expand-path=$.palette
-// https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 import {ThemeT} from "./";
 
 const theme: ThemeT = {
@@ -13,6 +8,12 @@ const theme: ThemeT = {
          c700: '#272522',
          c800: '#22201D',
          c900: '#1C1A18'
+      },
+      green: {
+         c500: '#769656'
+      },
+      yellow: {
+         c200: '#eeeed2'
       },
       text: {
          c50: '#f8f8f8',

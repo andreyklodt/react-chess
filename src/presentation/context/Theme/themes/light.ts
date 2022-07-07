@@ -9,6 +9,12 @@ const theme: ThemeT = {
          c800: '#22201D',
          c900: '#1C1A18'
       },
+      green: {
+         c500: '#769656'
+      },
+      yellow: {
+         c200: '#eeeed2'
+      },
       text: {
          c50: '#3A3A3A',
          c100: '#3A3A3A',

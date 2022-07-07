@@ -1,4 +1,4 @@
-import ThemeVariant from "../../../data/entity/ThemeVariant";
+import ThemeVariant from "../ThemeVariant";
 import darkTheme from './dark'
 import lightTheme from './light'
 

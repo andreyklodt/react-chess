@@ -23,4 +23,10 @@ type ColorsT = {
       c800: string,
       c900: string,
    }
+   green: {
+      c500: string
+   }
+  yellow: {
+      c200: string
+  }
 }

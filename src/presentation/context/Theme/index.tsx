@@ -1,6 +1,6 @@
 import {Component, createContext, ReactNode} from 'react'
 import {ThemeProvider} from "styled-components";
-import ThemeVariant from "../../data/entity/ThemeVariant";
+import ThemeVariant from "./ThemeVariant";
 import themes from './themes'
 
 type ThemePropsT = {
