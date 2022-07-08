@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.table`
+    border-collapse: collapse;
 `
 
 export const TCell = styled.td`

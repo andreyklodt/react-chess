@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.p`
-   background: 
+type PropsT = {
+   isYellow: boolean
+}
+
+export const Wrapper = styled.td<PropsT>`
+  background: ${({theme, isYellow}) => isYellow ? theme.colors.yellow.c200 : theme.colors.green.c500};
+  width: 65px;
+  height: 65px;
 `

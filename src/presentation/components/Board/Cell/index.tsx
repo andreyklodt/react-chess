@@ -1,9 +1,21 @@
 import {Component} from "react";
+import CellEntity from "../../../data/entity/Cell/Cell";
+import CellColor from "../../../data/entity/Cell/CellColor";
 import {Wrapper} from './styles'
 
-class Cell extends Component {
+type PropsT = {
+   data: CellEntity
+}
+
+class Cell extends Component<PropsT, unknown> {
+   constructor(props:PropsT) {
+      super(props);
+   }
+
    render() {
-      return <Wrapper>cell</Wrapper>
+   const {color} = this.props.data;
+
+      return <Wrapper isYellow = {color === CellColor.Yellow}/>
    }
 }
 

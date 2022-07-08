@@ -1,50 +1,34 @@
-import {Component, ReactElement} from "react";
-import {Wrapper, TCell, TRow} from './styles'
-
-const CELLS_TOTAL_AMOUNT = 64;
-
-type RowT = {
-   id: number,
-   cells: ReactElement[]
-}
+import {Component} from "react";
+import BoardEntity, {RowsT} from "../../data/entity/Board/Board";
+import Cell from './Cell'
+import {TRow, Wrapper} from './styles'
 
 type BoardStateT = {
-   rows: RowT[]
+   rows: RowsT
 }
 
 class Board extends Component<unknown, BoardStateT> {
    constructor(props: unknown) {
       super(props)
 
-      this.state = {rows: []}
+      this.state = {rows: this.gameBoard.rows}
    }
 
-   componentDidMount() {
-      this.setState({rows: this.formRows()})
-   }
+   get gameBoard(): BoardEntity {
+      const board = new BoardEntity();
+      board.initialAction()
 
-   formRows(): RowT[] {
-      const rows: RowT[] = [{cells: [], id: 0}]
-      let i = 0;
-
-      while (i < CELLS_TOTAL_AMOUNT) {
-         const lastRowIndex = rows.length - 1;
-         const lastRowLength = rows[lastRowIndex].cells.length
-         if (lastRowLength < 8) {
-            rows[lastRowIndex].cells.push(<TCell/>)
-         } else {
-            rows.push({cells: [<TCell/>], id: lastRowIndex + 1})
-         }
-
-         i += 1;
-      }
-
-      return rows
+      return board
    }
 
    render() {
+
       return <Wrapper>
-         {this.state.rows.map(({cells, id}) => <TRow key={id}>{cells}</TRow>)}
+         {this.state.rows.map((cells, index) => <TRow key={index}>{cells.map((cell) =>
+               <Cell data={cell}/>
+            )}
+            </TRow>
+         )}
       </Wrapper>
    }
 }
