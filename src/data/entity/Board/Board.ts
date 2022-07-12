@@ -12,9 +12,9 @@ export default class Board {
 
          for (let j = 0; j < 8; j++) {
             if ((i + j) % 2 === 0){
-               this._rows[i].push(new Cell(CellColor.Green))
+               this._rows[i].push(new Cell(CellColor.Green, null))
             }else{
-               this._rows[i].push(new Cell(CellColor.Yellow))
+               this._rows[i].push(new Cell(CellColor.Yellow, null))
             }
          }
       }

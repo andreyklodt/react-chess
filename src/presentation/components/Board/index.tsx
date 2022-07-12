@@ -1,5 +1,5 @@
 import {Component} from "react";
-import BoardEntity, {RowsT} from "../../data/entity/Board/Board";
+import BoardEntity, {RowsT} from "../../../data/entity/Board/Board";
 import Cell from './Cell'
 import {TRow, Wrapper} from './styles'
 
@@ -25,7 +25,7 @@ class Board extends Component<unknown, BoardStateT> {
 
       return <Wrapper>
          {this.state.rows.map((cells, index) => <TRow key={index}>{cells.map((cell) =>
-               <Cell data={cell}/>
+               <Cell key = {Math.random()} data={cell}/>
             )}
             </TRow>
          )}

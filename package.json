@@ -1,7 +1,7 @@
 {
   "name": "projects",
   "version": "1.0.0",
- "description": "### About React chess game. The project has been built completely with React class components",
+  "description": "### About React chess game. The project has been built completely with React class components",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,11 +33,13 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/styled-components": "^5.1.25",
+    "@types/svg-sprite-loader": "^3.9.5",
     "@typescript-eslint/eslint-plugin": "^5.30.3",
     "@typescript-eslint/parser": "^5.30.3",
     "babel-loader": "^8.2.5",
     "eslint": "^8.19.0",
     "html-webpack-plugin": "^5.5.0",
+    "svg-sprite-loader": "^6.0.11",
     "ts-loader": "^9.3.1",
     "typescript": "^4.7.4",
     "webpack": "^5.73.0",
