@@ -1,16 +1,21 @@
 import styled from "styled-components";
 import BaseIcon from '../../../components/common/block/Icon'
 
-type PropsT = {
+type WrapperPropsT = {
    isYellow: boolean
 }
 
-export const Wrapper = styled.td<PropsT>`
+export const Wrapper = styled.td<WrapperPropsT>`
   background: ${({theme, isYellow}) => isYellow ? theme.colors.yellow.c200 : theme.colors.green.c500};
   width: 65px;
   height: 65px;
 `
 
-export const Icon = styled(BaseIcon)`
-   width: 100%;
+type IconPropsT = {
+   isWhite: boolean
+}
+
+export const Icon = styled(BaseIcon)<IconPropsT>`
+  width: 100%;
+  fill: ${({theme, isWhite}) => theme.colors.white.c900}
 `

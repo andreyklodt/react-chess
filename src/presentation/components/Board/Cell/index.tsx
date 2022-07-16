@@ -1,7 +1,8 @@
 import {Component} from "react";
 import CellEntity from "../../../../data/entity/Cell/Cell";
 import CellColor from "../../../../data/entity/Cell/CellColor";
-import {Wrapper, Icon} from './styles'
+import {Icon, Wrapper} from './styles'
+import FigureColor from "../../../../data/entity/Figure/FigureColor";
 
 type PropsT = {
    data: CellEntity
@@ -16,7 +17,7 @@ class Cell extends Component<PropsT, unknown> {
       const {color, figure} = this.props.data;
 
       return <Wrapper isYellow={color === CellColor.Yellow}>
-         {figure && <Icon icon={figure.icon}/>}
+         {figure && <Icon isWhite = {figure.color === FigureColor.White} icon={figure.icon}/>}
       </Wrapper>
    }
 }

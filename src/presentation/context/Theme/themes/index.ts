@@ -1,9 +1,10 @@
 import ThemeVariant from "../ThemeVariant";
 import darkTheme from './dark'
 import lightTheme from './light'
+import {IColors} from "./defaultColors";
 
-export type ThemeT = {
-   colors: ColorsT,
+export interface ITheme {
+   colors: IColors,
    transitions: {
       short: number,
       standard: number,
@@ -15,7 +16,7 @@ export type ThemeT = {
    }
 }
 
-const themes: Record<ThemeVariant, ThemeT> = {
+const themes: Record<ThemeVariant, ITheme> = {
    [ThemeVariant.Dark]: darkTheme,
    [ThemeVariant.Light]: lightTheme
 }
