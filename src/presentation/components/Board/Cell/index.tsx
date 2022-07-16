@@ -1,7 +1,6 @@
 import {Component} from "react";
 import CellEntity from "../../../../data/entity/Cell/Cell";
 import CellColor from "../../../../data/entity/Cell/CellColor";
-import PawnIcon from '../../../assets/svg/bishop.svg'
 import {Wrapper, Icon} from './styles'
 
 type PropsT = {
@@ -14,10 +13,10 @@ class Cell extends Component<PropsT, unknown> {
    }
 
    render() {
-      const {color} = this.props.data;
+      const {color, figure} = this.props.data;
 
       return <Wrapper isYellow={color === CellColor.Yellow}>
-         <Icon icon = {PawnIcon}/>
+         {figure && <Icon icon={figure.icon}/>}
       </Wrapper>
    }
 }

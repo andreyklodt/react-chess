@@ -1,7 +1,7 @@
 import {Component} from "react";
 import BoardEntity, {RowsT} from "../../../data/entity/Board/Board";
 import Cell from './Cell'
-import {TRow, Wrapper} from './styles'
+import {TRow, TBody, Wrapper} from './styles'
 
 type BoardStateT = {
    rows: RowsT
@@ -24,11 +24,13 @@ class Board extends Component<unknown, BoardStateT> {
    render() {
 
       return <Wrapper>
-         {this.state.rows.map((cells, index) => <TRow key={index}>{cells.map((cell) =>
-               <Cell key = {Math.random()} data={cell}/>
+         <TBody>
+            {this.state.rows.map((cells, index) => <TRow key={index}>{cells.map((cell) =>
+                  <Cell key={cell.x + cell.y} data={cell}/>
+               )}
+               </TRow>
             )}
-            </TRow>
-         )}
+         </TBody>
       </Wrapper>
    }
 }

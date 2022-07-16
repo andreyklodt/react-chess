@@ -9,6 +9,8 @@ export const TCell = styled.td`
   width: 90px;
 `
 
+export const TBody = styled.tbody``
+
 export const TRow = styled.tr`
   &:nth-child(odd) {
     ${TCell}:nth-child(odd) {
