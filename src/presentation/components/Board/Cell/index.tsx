@@ -17,7 +17,7 @@ class Cell extends Component<PropsT, unknown> {
       const {color, figure} = this.props.data;
 
       return <Wrapper isYellow={color === CellColor.Yellow}>
-         {figure && <Icon isWhite = {figure.color === FigureColor.White} icon={figure.icon}/>}
+         {figure && <Icon isInverted = {figure.color === FigureColor.White} icon={figure.icon}/>}
       </Wrapper>
    }
 }
