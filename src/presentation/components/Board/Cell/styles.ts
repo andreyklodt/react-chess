@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import BaseIcon from '../../../components/common/block/Icon'
 
 type WrapperPropsT = {
@@ -11,16 +11,6 @@ export const Wrapper = styled.td<WrapperPropsT>`
   height: 65px;
 `
 
-type IconPropsT = {
-   isInverted: boolean
-}
-
-const invertedIconCss = css`
-  filter: invert(1);   
-`
-
-export const Icon = styled(BaseIcon)<IconPropsT>`
+export const Icon = styled(BaseIcon)`
   width: 100%;
-  
-  ${({isInverted})=> isInverted && invertedIconCss}
 `
