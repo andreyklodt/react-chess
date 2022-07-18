@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/andreyklodt/react-chess#readme",
   "dependencies": {
+    "nanoid": "^4.0.0",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

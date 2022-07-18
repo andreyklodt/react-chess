@@ -5,6 +5,8 @@ import CellEntity from '../../../../data/entity/Cell/Cell'
 
 type PropsT = {
    data: CellEntity
+   onClick: (cellId: CellEntity['id']) => void
+   isActive: boolean
 }
 
 class Cell extends Component<PropsT, unknown> {
@@ -13,9 +15,10 @@ class Cell extends Component<PropsT, unknown> {
    }
 
    render() {
-      const {color, figure} = this.props.data;
+      const {data, onClick, isActive} = this.props
+      const {color, figure, id} = data;
 
-      return <Wrapper isYellow={color === CellColor.Yellow}>
+      return <Wrapper isActive = {isActive} onClick={() => onClick(id)} isYellow={color === CellColor.Yellow}>
          {figure?.icon && <Icon icon={figure.icon}/>}
       </Wrapper>
    }

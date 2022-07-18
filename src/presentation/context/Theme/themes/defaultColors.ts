@@ -11,6 +11,9 @@ interface IDefaultColors {
    yellow: {
       c200: string
    }
+   blue: {
+      c500: string
+   }
 }
 
 export interface IColors extends IDefaultColors {
@@ -39,6 +42,9 @@ const defaultColors: IDefaultColors = {
    },
    yellow: {
       c200: '#eeeed2'
+   },
+   blue: {
+     c500: '#62b9ff'
    },
    // action: {
    //    button: {
